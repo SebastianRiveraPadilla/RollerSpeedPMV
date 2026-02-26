@@ -1,0 +1,13 @@
+package com.rollerspeed.rollerspeed;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class VisionController {
+
+    @GetMapping("/vision")
+    public String inicio() {
+        return "vision.html";
+    }
+}
