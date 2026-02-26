@@ -44,11 +44,7 @@ a {
     margin: 40px;
 }
 
-.boton_regresar{
-    display: flex;
-}
-
-.mision_eventos{
+.servicios_texto{
     display: flex;
     text-align: center;
     padding: 20px;
