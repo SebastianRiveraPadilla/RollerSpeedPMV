@@ -1,70 +1,89 @@
 header {
-    background-color: rgb(255, 194, 194);
+    background: linear-gradient(90deg, #1e3a8a, #38bdf8);
     align-content: center;
     text-align-last: center;
 }
 
-body {
-    background-color: rgb(116, 170, 252);
-    flex-direction: column;
-    margin: 0  ;
+h1 {
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
+body {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    flex-direction: column;
+    margin: 0;
+}
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 453px;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
+    background-color: #020617;
 }
-
 
 .nav-links {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 30px;
-    align-items: center;
+    justify-content: center;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links a {
-    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
     color: white;
-    font-size: 16px;
-    position: relative;
-    transition: 0.3s ease;
+    text-decoration: none;
 }
 
+.nav-links a:hover {
+    background-color: #38bdf8;
+    color: #000;
+}
 
-.nav-links a::after {
-    content: "";
+.Desplegable {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+
     position: absolute;
-    width: 0%;
-    height: 2px;
+    top: 100%;
     left: 0;
-    bottom: -5px;
-    background: #00c6ff;
+    background-color: #1e293b;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+}
+
+.Desplegable li {
+    opacity: 0;
+    transform: translateY(-5px);
     transition: 0.3s;
 }
 
-.nav-links a:hover::after {
-    width: 100%;
+.Desplegable li a {
+    padding: 10px;
 }
 
-
-.btn {
-    padding: 8px 18px;
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
-    border-radius: 20px;
-    transition: 0.3s;
+.Desplegable li a:hover {
+    background-color: #f97316;
+    color: white;
 }
 
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+.clasedesplegable:hover .Desplegable {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.clasedesplegable:hover .Desplegable li {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer{
@@ -134,3 +153,4 @@ footer hr {
 .contenedor3{
     padding: 20px;
 }
+

@@ -1,13 +1,13 @@
-package com.rollerspeed.rollerspeed;
+package com.rollerspeed.rollerspeed.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class ServiciosController {
+public class InstructorController {
 
-    @GetMapping("/servicios")
+    @GetMapping("/instructor")
     public String inicio() {
-        return "servicios.html";
+        return "instructor.html";
     }
 }
