@@ -20,7 +20,7 @@ body {
     margin: 0;
 }
 
-button {
+.boton_regresar a {
     background: rgba(255, 255, 255, 0.075);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -28,13 +28,14 @@ button {
     border-radius: 8px;
     cursor: pointer;
     color: white;
+    text-decoration: none;
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-button:hover {
+.boton_regresar a:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-50%) scale(1.05);
 }

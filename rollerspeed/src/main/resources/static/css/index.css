@@ -102,6 +102,7 @@ footer hr {
 .imagen {
     text-align: left;
     margin: 30px 0;
+    color: white;
 }
 
 .imagen img{
@@ -115,6 +116,7 @@ footer hr {
 .imagen2 {
     text-align: right;
     margin: 30px 0;
+    color: white;
 }
 
 .imagen2 img{
@@ -128,6 +130,7 @@ footer hr {
 .imagen3 {
     text-align: center;
     margin: 30px 0;
+    color: white;
 }
 
 .imagen3 img{

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,44 +12,44 @@
         <h1>
             RollerSpeed
         </h1>
-    
+        
         <nav class="navbar">
             <ul class="nav-links">
                 <li class="clasedesplegable">
                     <a href="#">Corporativo</a>
                         <ul class="Desplegable">
-                            <li><a href="mision">Mision</a></li>
-                            <li><a href="vision">Vision</a></li>
-                            <li><a href="valores">Valores</a></li>
-                            <li><a href="servicios">Servicios</a></li>
+                            <li><a th:href="@{/mision}">Mision</a></li>
+                            <li><a th:href="@{/vision}">Vision</a></li>
+                            <li><a th:href="@{/valores}">Valores</a></li>
+                            <li><a th:href="@{/servicios}">Servicios</a></li>
                         </ul>
                 </li>
 
                 <li class="clasedesplegable">
                     <a href="#">Registro</a>
                         <ul class="Desplegable">
-                            <li><a href="inscripcion_estudiantes">Inscripción de Estudiantes</a></li>
-                            <li><a href="inscripcion_instructores">Inscripción de Instructor</a></li>
-                            <li><a href="clases">Clases</a></li>
+                            <li><a th:href="@{/inscripcion_estudiantes}">Inscripción de Estudiantes</a></li>
+                            <li><a th:href="@{/inscripcion_instructores}">Inscripción de Instructor</a></li>
+                            <li><a th:href="@{/clases}">Clases</a></li>
                         </ul>
                 </li>
 
                 <li class="clasedesplegable">
                     <a href="#">Estudiantes</a>
                         <ul class="Desplegable">
-                            <li><a href="listar_estudiantes">Listar Estudiantes</a></li>
+                            <li><a th:href="@{/listar_estudiantes}">Listar Estudiantes</a></li>
                         </ul>
                 </li>
 
                 <li class="clasedesplegable">
                     <a href="#">Calendario</a>
                         <ul class="Desplegable">
-                            <li><a href="estudiantes">Estudiantes</a></li>
-                            <li><a href="instructor">Instructor</a></li>
+                            <li><a th:href="@{/estudiantes}">Estudiantes</a></li>
+                            <li><a th:href="@{/instructor}">Instructor</a></li>
                         </ul>
                 </li>
 
-                <li><a href="eventos_escuela">Eventos</a></li>
+                <li><a th:href="@{/eventos_escuela}">Eventos</a></li>
 
             </ul>
         </nav>
@@ -87,11 +87,11 @@
         
    
     <footer>
-    <hr>
-    <p>
-        &reg Todos los derechos reservados.
-    </p>
-</footer>
+        <hr>
+        <p>
+            &reg Todos los derechos reservados.
+        </p>
+    </footer>
 </body>
 
 </html>
