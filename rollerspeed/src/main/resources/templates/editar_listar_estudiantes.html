@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Editar Estudiante</title>
+    <link rel="stylesheet" href="/css/inscripcion_estudiantes.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Editar Estudiante</h1>
+        <a th:href="@{/listar_estudiantes}">← Volver</a>
+    </header>
+
+    <div>
+
+        <form th:action="@{/actualizar}" method="post" th:object="${estudiante}">
+            <input type="hidden" th:field="*{id}" />
+    
+        <div>
+            <label>Nombre:</label>
+            <input type="text" th:field="*{nombre}" required>
+        </div>
+
+        <div>
+            <label>Correo:</label>
+            <input type="email" th:field="*{correo}" required>
+        </div>
+
+        <button type="submit">Actualizar</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

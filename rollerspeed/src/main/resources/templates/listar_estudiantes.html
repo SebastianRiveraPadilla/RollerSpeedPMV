@@ -8,7 +8,7 @@
 <body>
     <header>
         <div class="contenedor_max">
-            <div class ="contenedor1">
+            <div class="contenedor1">
                 <div class="boton_regresar">
                     <a th:href="@{/}">Regresar</a>
                 </div>
@@ -19,20 +19,39 @@
                 </div>
             </div>
         </div>
-
     </header>
-    <div class="contenedor3">
-        <div class="texto_listar_estudiantes">
-            <p>
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Sapiente corrupti amet reiciendis fugiat aut, 
-                laboriosam suscipit voluptatibus numquam repellat ipsa maiores odio tempora architecto, 
-                atque consectetur voluptatum maxime itaque ex?
-            </p>
-        </div>
-    </div>
-    
 
+    <div class="contenedor3">
+
+        <h2>Lista de Estudiantes</h2>
+
+        <br><br>
+
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+
+            <tr th:each="e : ${lista}">
+                <td th:text="${e.id}"></td>
+                <td th:text="${e.nombre}"></td>
+                <td th:text="${e.correo}"></td>
+                <td>
+                    <a th:href="@{/editar/{id}(id=${e.id})}">Editar</a>
+                    |
+                    <form th:action="@{/eliminar/{id}(id=${e.id})}" method="post" style="display:inline;">
+                        <button type="submit" onclick="return confirm('¿Seguro que deseas eliminar este estudiante?')">
+                        Eliminar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+    </div>
 
 </body>
-</html>
+</html> 

@@ -8,31 +8,34 @@
 <body>
     <header>
         <div class="contenedor_max">
-            <div class ="contenedor1">
+            <div class="contenedor1">
                 <div class="boton_regresar">
                     <a th:href="@{/}">Regresar</a>
                 </div>
             </div>
             <div class="contenedor2">
-                <div class="inscripcion_estudiantes_texto">
+                <div class="estudiantes_texto">
                     <h1>Inscripción de Estudiantes</h1>
                 </div>
             </div>
         </div>
-
     </header>
+
     <div class="contenedor3">
-        <div class="texto_inscripcion_estudiantes">
-            <p>
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Sapiente corrupti amet reiciendis fugiat aut, 
-                laboriosam suscipit voluptatibus numquam repellat ipsa maiores odio tempora architecto, 
-                atque consectetur voluptatum maxime itaque ex?
-            </p>
+
+        <h2>Registrar Estudiante</h2>
+
+        <form th:action="@{/guardar}" method="post">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="correo" placeholder="Correo" required>
+            <button type="submit">Guardar</button>
+        </form>
+
+        <br>
+        <div>
+            <a th:href="@{/listar_estudiantes}">Ver estudiantes registrados</a>
         </div>
     </div>
-    
-
 
 </body>
 </html>
