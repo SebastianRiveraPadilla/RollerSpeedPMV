@@ -5,6 +5,7 @@ import com.rollerspeed.rollerspeed.service.EstudianteRegistroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class InscripcionEstudiantesController {
@@ -18,9 +19,12 @@ public class InscripcionEstudiantesController {
     }
 
     @PostMapping("/guardar")
-    public String guardar(EstudianteRegistro estudiante) {
+    public String guardar(EstudianteRegistro estudiante, RedirectAttributes redirectAttributes) {
         service.guardar(estudiante);
-        return "redirect:/listar_estudiantes";
+
+        redirectAttributes.addFlashAttribute("mensaje", "Estudiante agregado correctamente");
+
+        return "redirect:/inscripcion_estudiantes";
     }
 }
 

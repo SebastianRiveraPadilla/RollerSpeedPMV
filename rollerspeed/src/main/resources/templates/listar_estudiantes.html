@@ -25,9 +25,7 @@
 
         <h2>Lista de Estudiantes</h2>
 
-        <br><br>
-
-        <table border="1">
+        <table>
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
@@ -39,14 +37,20 @@
                 <td th:text="${e.id}"></td>
                 <td th:text="${e.nombre}"></td>
                 <td th:text="${e.correo}"></td>
-                <td>
-                    <a th:href="@{/editar/{id}(id=${e.id})}">Editar</a>
-                    |
+
+                <td class="acciones">
+
+                    <a th:href="@{/editar/{id}(id=${e.id})}" class="btn-editar">
+                        Editar
+                    </a>
+
                     <form th:action="@{/eliminar/{id}(id=${e.id})}" method="post" style="display:inline;">
-                        <button type="submit" onclick="return confirm('¿Seguro que deseas eliminar este estudiante?')">
-                        Eliminar
+                        <button type="submit" class="btn-eliminar"
+                            onclick="return confirm('¿Seguro que deseas eliminar este estudiante?')">
+                            Eliminar
                         </button>
                     </form>
+
                 </td>
             </tr>
         </table>
@@ -54,4 +58,4 @@
     </div>
 
 </body>
-</html> 
+</html>

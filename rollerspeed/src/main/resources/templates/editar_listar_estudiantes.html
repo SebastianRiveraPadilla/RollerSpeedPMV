@@ -2,35 +2,43 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Editar Estudiante</title>
-    <link rel="stylesheet" href="/css/inscripcion_estudiantes.css">
+    <link rel="stylesheet" href="/css/editar_listar_estudiante.css">
 </head>
 
 <body>
 
-    <header>
+<header>
+    <div class="header-contenido">
+        <a th:href="@{/listar_estudiantes}" class="btn-volver">Volver a la Lista</a>
         <h1>Editar Estudiante</h1>
-        <a th:href="@{/listar_estudiantes}">← Volver</a>
-    </header>
+    </div>
+</header>
 
-    <div>
+<div class="contenedor">
 
-        <form th:action="@{/actualizar}" method="post" th:object="${estudiante}">
-            <input type="hidden" th:field="*{id}" />
-    
-        <div>
-            <label>Nombre:</label>
+    <h2>Actualizar Información</h2>
+
+    <form th:action="@{/actualizar}" method="post" th:object="${estudiante}">
+        
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="campo">
+            <label>Nombre</label>
             <input type="text" th:field="*{nombre}" required>
         </div>
 
-        <div>
-            <label>Correo:</label>
+        <div class="campo">
+            <label>Correo</label>
             <input type="email" th:field="*{correo}" required>
         </div>
 
-        <button type="submit">Actualizar</button>
-        </form>
+        <button type="submit" class="btn-actualizar">
+            Actualizar
+        </button>
 
-    </div>
+    </form>
+
+</div>
 
 </body>
 </html>

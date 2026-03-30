@@ -1,3 +1,4 @@
+
 header {
     background: linear-gradient(90deg, #1e3a8a, #38bdf8);
     display: flex;
@@ -33,6 +34,7 @@ body {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0.3s;
 }
 
 .boton_regresar a:hover {
@@ -66,12 +68,77 @@ a {
 }
 
 .contenedor3 {
-    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    margin: 40px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+
+    background: linear-gradient(145deg, #1e293b, #1e3a8a);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+
+    color: white;
 }
 
-.texto_listar_estudiantes {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    background: rgba(0,0,0,0.4);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-editar {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00d4ff, #38bdf8);
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-editar:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 212, 255, 0.6);
+}
+
+.btn-eliminar {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(90deg, #ff4d4d, #ff0000);
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-eliminar:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.6);
 }
