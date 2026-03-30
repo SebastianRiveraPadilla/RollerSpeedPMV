@@ -1,15 +1,21 @@
 package com.rollerspeed.rollerspeed.model;
 
 import jakarta.persistence.*;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 @Entity
+@Schema(description = "Entidad que representa un estudiante")
 public class EstudianteRegistro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "ID único del estudiante", example = "1")
     private Long id;
 
+    @Schema(description = "Nombre del estudiante", example = "Juan Pérez")
     private String nombre;
+
+    @Schema(description = "Correo electrónico del estudiante", example = "juan@gmail.com")
     private String correo;
 
     public EstudianteRegistro() {}

@@ -17,8 +17,8 @@ public class EstudianteRegistroService {
         return repo.findAll();
     }
 
-    public void guardar(EstudianteRegistro e) {
-        repo.save(e);
+    public EstudianteRegistro guardar(EstudianteRegistro e) {
+    return repo.save(e);
     }
 
     public EstudianteRegistro buscar(Long id) {
@@ -30,9 +30,18 @@ public class EstudianteRegistroService {
     copia.setNombre(e.getNombre());
     copia.setCorreo(e.getCorreo());
     return copia;
-}
+    }
 
     public void eliminar(Long id) {
         repo.deleteById(id);
+    }
+
+    public EstudianteRegistro actualizar(Long id, EstudianteRegistro e) {
+    EstudianteRegistro existente = repo.findById(id).orElseThrow();
+
+    existente.setNombre(e.getNombre());
+    existente.setCorreo(e.getCorreo());
+
+    return repo.save(existente);
     }
 }
